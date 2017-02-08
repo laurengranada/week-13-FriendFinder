@@ -1,0 +1,29 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "hi",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurengranada/week-13-FriendFinder.git"
+  },
+  "keywords": [
+    "friendfinder"
+  ],
+  "author": "lg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurengranada/week-13-FriendFinder/issues"
+  },
+  "homepage": "https://github.com/laurengranada/week-13-FriendFinder#readme"
+}
