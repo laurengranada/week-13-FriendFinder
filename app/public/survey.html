@@ -1,0 +1,166 @@
+</!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Friend Finder</title>
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<!-- bootstrap js -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	@font-face {
+    font-family: 'Friends';
+    src:url('../css/Friends.ttf.woff') format('woff'),
+        url('../css/Friends.ttf.svg#Friends') format('svg'),
+        url('../css/Friends.ttf.eot'),
+        url('../css/Friends.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+	}
+	h1 { 
+	   font-family: 'Friends';
+	}  
+	h3{
+		font-weight: bold;
+	}
+	h5{
+		font-style: italic;
+	}
+	body {
+		background-image: url(css/map.jpg);
+	}
+	.shadows-here{
+		margin: 35px 35px 35px;
+		box-shadow: 5px 5px 15px black;
+
+	}
+
+</style>
+
+<body>
+		<div class="jumbotron jumbotron-fluid shadows-here" style="text-align: center; ">
+		  <div class="container">
+		    <h1 class="display-4">F!r^i!e&n^d F^i!n^d%e&r</h1>
+		    <p class="lead">Take this quiz & find your most compatible friend!</p>
+		  </div>
+		</div>
+
+		<div class="shadows-here jumbotron jumbotron-fluid">
+			<div class="container">
+				<h4>Name</h4><input type="text" id="name" class="form-control" placeholder="Name (required)" aria-label="Name">
+				<br>
+				<h4>Photo Link Here</h4><input type="text" id="photo" class="form-control" placeholder="Photo Link (required)" aria-label="photo link">
+				<br>
+				<hr>
+				
+				<h3>Question #1:</h3>
+				<h5>I am an avid social media user</h5>
+				<select class="custom-select" id="question1">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+				
+	  			<h3>Question #2:</h3>
+	  			<h5>I like to have plans instead of staying in</h5>
+				<select class="custom-select" id="question2">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #3:</h3>
+	  			<h5>In friendships, I communicate well</h5>
+				<select class="custom-select" id="question3">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #4:</h3>
+	  			<h5>I consider myself a tidy person</h5>
+				<select class="custom-select" id="question4">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #5:</h3>
+	  			<h5>I like having/being around pets</h5>
+				<select class="custom-select" id="question5">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #6:</h3>
+	  			<h5>I enjoy going to festivals/concerts</h5>
+				<select class="custom-select" id="question6">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #7:</h3>
+	  			<h5>I'm open-minded and willing to try new foods</h5>
+				<select class="custom-select" id="question7">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #8:</h3>
+	  			<h5>I like being spontaneous</h5>
+				<select class="custom-select" id="question8">
+				   <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #9:</h3>
+	  			<h5>I like time to myself</h5>
+				<select class="custom-select" id="question9">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+
+	  			<h3>Question #10:</h3>
+	  			<h5>I'm the going out type, with a drink in hand</h5>
+				<select class="custom-select" id="question10">
+				    <option value="1">One(Strongly Disagree)</option>
+				    <option value="2">Two</option>
+				    <option value="3">Three</option>
+				    <option value="4">Four</option>
+				    <option value="5">Five(Strongly Agree)</option>
+	  			</select>
+	  			<br>
+				<br>
+	  			<button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+			</div>
+		</div>
+
+
+</body>
+</html>
