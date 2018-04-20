@@ -5,14 +5,15 @@
 	<title>Friend Finder</title>
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  	<!-- bootstrap js -->
-<script
+	<!-- bootstrap js -->
+	<script
   src="http://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </head>
+<!-- css for this page only -->
 <style type="text/css">
 	@font-face {
     font-family: 'Friends';
@@ -23,7 +24,7 @@
     font-weight: normal;
     font-style: normal;
 	}
-	h1 { 
+	h1, .friends-font { 
 	   font-family: 'Friends';
 	}  
 	h3{
@@ -33,32 +34,34 @@
 		font-style: italic;
 	}
 	body {
-		background-image: url(css/map.jpg);
+		background-color: #6a45a4;
+		background-image: url(css/frame-name.png);
+		background-repeat: no-repeat;
+		background-size: 50% auto;
+		background-position: top center;
 	}
+	.jumbotron{
+		background-color: #b682ff;
+		text-align: center;
+		margin-top: 43%;
+		padding: 20px;
+		border: 1px white solid;
+}
 	.shadows-here{
 		margin: 35px 35px 35px;
-		box-shadow: 5px 5px 15px black;
+		box-shadow: 3px 5px 15px black;
+		text-align: left;
+		margin-top: 39%;
 
 	}
 
 </style>
 
 <body>
-		<div class="jumbotron jumbotron-fluid shadows-here" style="text-align: center; ">
-		  <div class="container">
-		   <h1 class="display-4">F<span style="color: red">!</span>r<span style="color: yellow">^</span>i<span style="color: blue">!</span>e<span style="color: red">&</span>n<span style="color: yellow">^</span>d F<span style="color: blue">^</span>i<span style="color: red">!</span>n<span style="color: yellow">^</span>d<span style="color: blue">%</span>e<span style="color: red">&</span>r</h1>
-		    <p class="lead">Take this quiz & find your most compatible friend!</p>
-		  </div>
-		</div>
 
 		<div class="shadows-here jumbotron jumbotron-fluid">
 			<div class="container">
-				<h4>Name</h4><input type="text" id="name" class="form-control" placeholder="Name (required)" aria-label="Name">
-				<br>
-				<h4>Photo Link Here</h4><input type="text" id="photo" class="form-control" placeholder="Photo Link (required)" aria-label="photo link">
-				<br>
-				<hr>
-				
+				<!-- questions for survey -->
 				<h3>Question #1:</h3>
 				<h5>I am an avid social media user</h5>
 				<select class="custom-select" id="question1">
@@ -175,18 +178,18 @@
 			</div>
 		</div>
 
-		<!-- Modal -->
+				<!-- Modal -->
 		<div id="results-here" class="modal fade" id="results" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Most Compatible</h5>
+		        <h4 class="modal-title" id="exampleModalLabel">You're Most Compatible With...</h4>
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
-		      <div class="modal-body">
-		        <h2 id="compatible-name"></h2>
+		      <div class="modal-body" style="text-align: center;">
+		        <h3 id="compatible-name"></h3>
 		        <img id="compatible-gif" src="">
 		      </div>
 		      <div class="modal-footer">
@@ -195,32 +198,11 @@
 		    </div>
 		  </div>
 		</div>
-
+<!-- javascript -->
 	<script type="text/javascript">
 
 		$("#submit").on("click", function(){
-			 event.preventDefault();
-
-			      // Form validation
-			      function validateForm() {
-			        var isValid = true;
-			        $(".form-control").each(function() {
-			          if ($(this).val() === "") {
-			            isValid = false;
-			          }
-			        });
-
-			        $(".chosen-select").each(function() {
-
-			          if ($(this).val() === "") {
-			            isValid = false;
-			          }
-			        });
-			        return isValid;
-			      }
-
-			 if (validateForm()){
-			// object for user data
+			// store user data for comparison
 			var userData = {
 	          name: $("#name").val(),
 	          photo: $("#photo").val(),
@@ -246,12 +228,10 @@
 	        	//trigger modal
 	        	$("#results-here").modal("toggle");
 	        });
-	    } else{
-	    	alert("Please fill out all fields")
-	    }
 	});
 
 	</script>
+
 
 </body>
 </html>

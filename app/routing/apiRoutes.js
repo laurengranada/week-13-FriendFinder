@@ -27,7 +27,7 @@ module.exports = function(app){
 			//list variable locally
 			totalDifference = 0;
 			// for loop to go through for scores of same friend data
-			for (var j = 0; i <friends[i].scores[j]; j++){
+			for (var j = 0; j <friends[i].scores[j]; j++){
 				totalDifference += Math.abs(parseInt(userScore[j]) - parseInt(friends[i].scores[j]));
 
 				if(totalDifference <= mostCompatible.differenceBetween){
@@ -38,7 +38,7 @@ module.exports = function(app){
 			}
 
 		}
-		friends.push(userData);
+		// friends.push(userData);
 		res.json(mostCompatible);
 	});
 };

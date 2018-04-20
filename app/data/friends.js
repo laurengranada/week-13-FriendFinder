@@ -65,7 +65,7 @@ var friends = [
 	},
 	{
 		name: "Chandler",
-		photo: "https://media.giphy.com/media/KaTCzyrqo11Ju/giphy.gif",
+		photo: "https://media.giphy.com/media/vNITrslTkxf8Y/giphy.gif",
 		scores: [
 			"3",
 			"3",
