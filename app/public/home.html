@@ -24,8 +24,8 @@
 	   font-family: 'Friends';
 	}  
 	body {
-		background-color: #6a45a4;
-		background-image: url(css/frame-name.png);
+		background-color: #7452ab;
+	/*	background-image: url(css/frame-name.png);*/
 		background-repeat: no-repeat;
 		background-size: 50% auto;
 		background-position: top center;
@@ -33,14 +33,29 @@
 	.jumbotron{
 		background-color: #b682ff;
 		text-align: center;
-		margin-top: 47%;
+		margin-top: 5%;
 		padding: 20px;
 		border: 1px white solid;
 		box-shadow: 3px 5px 15px black;
-}
+	}
+	.intro-video{
+		max-height: 50%;
+		max-width: 50%;
+		display: block;
+		margin: auto;
+	}
+
 </style>
 
 <body>
+<!-- inputing video -->
+<div>
+	<video class="intro-video" autoplay="autoplay" loop="loop" >
+		<source src="css/intro.mp4" type="video/mp4">
+	</video>
+
+</div>
+
 	<div class="container">
 		<div class="jumbotron jumbotron-fluid">
 		    <p class="lead">Take this quiz & find out which <br> <span class="friends-font"> F!r^i!e&n^d&s </span> <br> character you're most compatible with!</p>
