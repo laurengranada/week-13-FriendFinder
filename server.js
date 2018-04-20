@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 8080;
 var jsonParser = bodyParser.json()
  
 // create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser.urlencoded({ extended: true }));
  
 //hosts entire public folder as static - this allows my css to show
 app.use(express.static('./app/public'))
@@ -27,7 +27,7 @@ app.use(bodyParser.text({ type: 'text/html' }))
 
 
 //require files for routes
-// require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
 
