@@ -85,7 +85,7 @@
 				<!-- questions for survey -->
 				<h3>Question #1:</h3>
 				<h5>I am an avid social media user</h5>
-				<select class="custom-select" id="question1">
+				<select class="custom-select" id="question1" required>
 				    <option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -96,7 +96,7 @@
 				
 	  			<h3>Question #2:</h3>
 	  			<h5>I like to have plans instead of staying in</h5>
-				<select class="custom-select" id="question2">
+				<select class="custom-select" id="question2" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -107,7 +107,7 @@
 
 	  			<h3>Question #3:</h3>
 	  			<h5>In friendships, I communicate well</h5>
-				<select class="custom-select" id="question3">
+				<select class="custom-select" id="question3" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -118,7 +118,7 @@
 
 	  			<h3>Question #4:</h3>
 	  			<h5>I consider myself a tidy person</h5>
-				<select class="custom-select" id="question4">
+				<select class="custom-select" id="question4" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -129,7 +129,7 @@
 
 	  			<h3>Question #5:</h3>
 	  			<h5>I like having/being around pets</h5>
-				<select class="custom-select" id="question5">
+				<select class="custom-select" id="question5" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -140,7 +140,7 @@
 
 	  			<h3>Question #6:</h3>
 	  			<h5>I enjoy going to festivals/concerts</h5>
-				<select class="custom-select" id="question6">
+				<select class="custom-select" id="question6" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -151,7 +151,7 @@
 
 	  			<h3>Question #7:</h3>
 	  			<h5>I'm open-minded and willing to try new foods</h5>
-				<select class="custom-select" id="question7">
+				<select class="custom-select" id="question7" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -162,7 +162,7 @@
 
 	  			<h3>Question #8:</h3>
 	  			<h5>I like being spontaneous</h5>
-				<select class="custom-select" id="question8">
+				<select class="custom-select" id="question8" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -173,7 +173,7 @@
 
 	  			<h3>Question #9:</h3>
 	  			<h5>I like time to myself</h5>
-				<select class="custom-select" id="question9">
+				<select class="custom-select" id="question9" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -184,7 +184,7 @@
 
 	  			<h3>Question #10:</h3>
 	  			<h5>I'm the going-out type, with a drink in hand</h5>
-				<select class="custom-select" id="question10">
+				<select class="custom-select" id="question10" required>
 					<option value=""></option>
 				    <option value="1">One(Strongly Disagree)</option>
 				    <option value="2">Two</option>
@@ -203,6 +203,20 @@
 	<script type="text/javascript">
 
 		$("#submit").on("click", function(){
+	      // Form validation
+	      function validateForm() {
+	        var isValid = true;
+
+	        $(".custom-select").each(function() {
+
+	          if ($(this).val() === "") {
+	            isValid = false;
+	          }
+	        });
+	        return isValid;
+	      }
+		// If all required fields are filled
+	      if (validateForm()) {
 			// store user data for comparison
 			var userData = {
 	          name: $("#name").val(),
@@ -229,6 +243,9 @@
 	        	//trigger modal
 	        	$("#results-here").modal("toggle");
 	        });
+	    }else {
+        alert("Please answer all questions before submitting!");
+      }
 	});
 
 	</script>
