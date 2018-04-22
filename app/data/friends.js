@@ -20,8 +20,8 @@ var friends = [
 		photo: "https://media.giphy.com/media/KaTCzyrqo11Ju/giphy.gif",
 		scores: [
 			"4",
-			"2",
-			"4",
+			"1",
+			"5",
 			"4",
 			"4",
 			"4",
@@ -44,21 +44,21 @@ var friends = [
 			"1",
 			"5",
 			"4",
-			"1"
+			"3"
 		]
 	},
 	{
 		name: "Monica",
 		photo: "https://media.giphy.com/media/IdyHPMy8eqZ68/giphy.gif",
 		scores: [
-			"5",
 			"3",
-			"5",
+			"2",
+			"4",
 			"5",
 			"1",
 			"3",
 			"5",
-			"3",
+			"1",
 			"3",
 			"3"
 		]
@@ -68,13 +68,13 @@ var friends = [
 		photo: "https://media.giphy.com/media/vNITrslTkxf8Y/giphy.gif",
 		scores: [
 			"3",
-			"3",
-			"3",
-			"3",
-			"3",
-			"5",
-			"2",
 			"1",
+			"1",
+			"3",
+			"3",
+			"3",
+			"2",
+			"3",
 			"2",
 			"4"
 		]
@@ -85,8 +85,8 @@ var friends = [
 		scores: [
 			"4",
 			"5",
-			"4",
 			"1",
+			"3",
 			"5",
 			"3",
 			"5",
