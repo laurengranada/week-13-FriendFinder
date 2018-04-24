@@ -1,87 +1,66 @@
-</!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Friend Finder</title>
+	<title>Friends Finder</title>
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<!-- bootstrap js -->
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </head>
-<!-- css for this page only -->
-<style type="text/css">
-	@font-face {
-    font-family: 'Friends';
-    src:url('css/Friends.ttf.woff') format('woff'),
-        url('css/Friends.ttf.svg#Friends') format('svg'),
-        url('css/Friends.ttf.eot'),
-        url('css/Friends.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-	}
-	h1, .friends-font { 
-	   font-family: 'Friends';
-	}  
-	h3{
-		font-weight: bold;
-	}
-	h5{
-		font-style: italic;
-	}
-	body {
-		// background-color: #7452ab;
-
-		background-repeat: no-repeat;
-		background-size: 50% auto;
-		background-position: top center;
-	}
-	.jumbotron{
-		// background-color: #b682ff;
-		text-align: center;
-		margin-top: 43%;
-		padding: 20px;
-		border: 1px white solid;
-}
-	.shadows-here{
-		margin: 35px 35px 35px;
-		box-shadow: 3px 5px 15px black;
-		text-align: left;
-		margin-top: 39%;
-
-	}
-
-</style>
-
+	<style type="text/css">
+		@font-face {
+	    font-family: 'Friends';
+	    src:url('css/Friends.ttf.woff') format('woff'),
+	        url('css/Friends.ttf.svg#Friends') format('svg'),
+	        url('css/Friends.ttf.eot'),
+	        url('css/Friends.ttf.eot?#iefix') format('embedded-opentype'); 
+	    font-weight: normal;
+	    font-style: normal;
+		}
+		h1, .friends-font { 
+		   font-family: 'Friends';
+		   text-shadow: 2px 2px 40px black, 2px 2px 40px black, 2px 2px 40px black, 2px 2px 40px black;
+		   color: white;
+		} 
+		body{
+			background-image: url(css/coffeeshop.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		.friends-font{
+		   font-family: 'Friends';
+		   text-shadow: 1px 2px black;
+		   color: black;
+		}
+		.jumbotron{
+			text-align: center;
+		}
+		.top-j{
+			padding: 2%;
+			background: none;
+			margin: 4%;
+		}
+		.center-container{
+			margin-left: 20%;
+			margin-right: 20%;
+			box-shadow: 3px 5px 15px black;
+			align-content: center;
+		}
+		.custom-select{
+			width: 75%;
+		}
+	</style>
 <body>
-
-				<!-- Modal positioned at top to avoid problems showing up in live-mode-->
-		<div id="results-here" class="modal fade" id="results" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h4 class="modal-title" id="exampleModalLabel">You're Most Compatible With...</h4>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body" style="text-align: center;">
-		        <h3 id="compatible-name"></h3>
-		        <img id="compatible-gif" src="" width="400px";>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
-		<div class="shadows-here jumbotron jumbotron-fluid">
-			<div class="container">
+	<div class="jumbotron jumbotron-fluid top-j">
+	  <div class="container">
+	    <h1 class="display-4">F<span style="color: #e02c1c">!</span>r<span style="color: #3bbbe6">^</span>i<span style="color: #ffc105">!</span>e<span style="color: #e02c1c">&</span>n<span style="color: #3bbbe6">^</span>d F<span style="color: #e02c1c">!</span>i<span style="color: #3bbbe6">^</span>n<span style="color: #ffc105">!</span>d<span style="color: #e02c1c">&</span>e<span style="color: #3bbbe6">^</span>r</h1>
+<!-- 	     <img style="max-height: 20%; max-width: 20%;" src="css/couch.png"> -->
+	  </div>
+	</div>
+	<div class="jumbotron jumbotron-fluid center-container">
+	  <div class="container">
 				<!-- questions for survey -->
 				<h3>Question #1:</h3>
 				<h5>I am trusting of others</h5>
@@ -195,66 +174,9 @@
 	  			<br>
 				<br>
 				<!-- // submit button -->
-	  			<button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
-			</div>
-		</div>
-
-	    <footer class="footer" style="text-align: center;">
-	      <div class="container">
-	        <h4><a style="color: black" href="/">Homepage</a></h4>
-	      </div>
-	    </footer>
-
-<!-- javascript -->
-	<script type="text/javascript">
-
-		$("#submit").on("click", function(){
-	      // Form validation
-	      function validateForm() {
-	        var isValid = true;
-
-	        $(".custom-select").each(function() {
-
-	          if ($(this).val() === "") {
-	            isValid = false;
-	          }
-	        });
-	        return isValid;
-	      }
-		// If all required fields are filled
-	      if (validateForm()) {
-			// store user data for comparison
-			var userData = {
-	          name: $("#name").val(),
-	          photo: $("#photo").val(),
-	          scores: [
-	            $("#question1").val(),
-	            $("#question2").val(),
-	            $("#question3").val(),
-	            $("#question4").val(),
-	            $("#question5").val(),
-	            $("#question6").val(),
-	            $("#question7").val(),
-	            $("#question8").val(),
-	            $("#question9").val(),
-	            $("#question10").val()
-	          ]
-	        };
-	        //ajax post
-	        $.post("/api/friends", userData, function(data){
-	        	//post results
-	        	$("#compatible-name").text(data.name);
-	        	$("#compatible-gif").attr("src", data.photo);
-
-	        	//trigger modal
-	        	$("#results-here").modal("toggle");
-	        });
-	    }else {
-        alert("Please answer all questions before submitting!");
-      }
-	});
-
-	</script>
+	  			<button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" id="submit" style="width: 75%"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
+	  </div>
+	</div>
 
 
 </body>

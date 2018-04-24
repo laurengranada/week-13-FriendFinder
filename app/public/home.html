@@ -1,8 +1,7 @@
-</!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Friend Finder</title>
+	<title>Friends Finder</title>
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<!-- bootstrap js -->
@@ -10,60 +9,61 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </head>
-<style type="text/css">
-	@font-face {
-    font-family: 'Friends';
-    src:url('css/Friends.ttf.woff') format('woff'),
-        url('css/Friends.ttf.svg#Friends') format('svg'),
-        url('css/Friends.ttf.eot'),
-        url('css/Friends.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-	}
-	h1, .friends-font { 
-	   font-family: 'Friends';
-	}  
-	body {
-		// background-color: #7452ab;
-	/*	background-image: url(css/frame-name.png);*/
-		background-repeat: no-repeat;
-		background-size: 50% auto;
-		background-position: top center;
-	}
-	.jumbotron{
-		// background-color: #b682ff;
-		text-align: center;
-		margin-top: 5%;
-		padding: 20px;
-		border: 1px white solid;
-		box-shadow: 3px 5px 15px black;
-	}
-	.intro-video{
-		max-height: 50%;
-		max-width: 50%;
-		display: block;
-		margin: auto;
-	}
-
-</style>
-
+	<style type="text/css">
+		@font-face {
+	    font-family: 'Friends';
+	    src:url('css/Friends.ttf.woff') format('woff'),
+	        url('css/Friends.ttf.svg#Friends') format('svg'),
+	        url('css/Friends.ttf.eot'),
+	        url('css/Friends.ttf.eot?#iefix') format('embedded-opentype'); 
+	    font-weight: normal;
+	    font-style: normal;
+		}
+		h1{ 
+		   font-family: 'Friends';
+		   text-shadow: 2px 2px 40px black, 2px 2px 40px black, 2px 2px 40px black, 2px 2px 40px black;
+		   color: white;
+		} 
+		body{
+			background-image: url(css/coffeeshop.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		.friends-font{
+		   font-family: 'Friends';
+/*		   text-shadow: 1px 2px black;*/
+		   color: black;
+		}
+		.jumbotron{
+			text-align: center;
+		}
+		.top-j{
+			padding: 2%;
+			background: none;
+			margin: 4%;
+		}
+		.center-container{
+			margin-left: 20%;
+			margin-right: 20%;
+			text-align: center;
+			box-shadow: 3px 5px 15px black;
+		}
+	</style>
 <body>
-<!-- inputing video -->
-<div>
-	<video class="intro-video" autoplay="autoplay" loop="loop" >
-		<source src="css/intro.mp4" type="video/mp4">
-	</video>
-
-</div>
-
-	<div class="container">
-		<div class="jumbotron jumbotron-fluid">
-		    <p class="lead">Take this quiz & find out which <br> <span class="friends-font"> F!r^i!e&n^d&s </span> <br> character you're most compatible with!</p>
-		    <a class="btn btn-primary btn-lg" href="/survey" role="button">Get Your Quiz On</a><br><br>
-		    <img style="max-height: 30%; max-width: 30%;" src="css/couch.png">
-		  </div>
-		</div>
+	<div class="jumbotron jumbotron-fluid top-j">
+	  <div class="container">
+	    <h1 class="display-4">F<span style="color: #e02c1c">!</span>r<span style="color: #3bbbe6">^</span>i<span style="color: #ffc105">!</span>e<span style="color: #e02c1c">&</span>n<span style="color: #3bbbe6">^</span>d F<span style="color: #e02c1c">!</span>i<span style="color: #3bbbe6">^</span>n<span style="color: #ffc105">!</span>d<span style="color: #e02c1c">&</span>e<span style="color: #3bbbe6">^</span>r</h1>
+<!-- 	     <img style="max-height: 20%; max-width: 20%;" src="css/couch.png"> -->
+	  </div>
 	</div>
+	<div class="jumbotron jumbotron-fluid center-container">
+	  <div class="container">
+		<p class="lead">Take this quiz & find out which <br> <span class="friends-font"> F<span style="color: #e02c1c">!</span>r<span style="color: #3bbbe6">^</span>i<span style="color: #ffc105">!</span>e<span style="color: #e02c1c">&</span>n<span style="color: #3bbbe6">^</span>d<span style="color: #ffc105">&</span>s </span> <br> character you're most compatible with!</p>
+		<a class="btn btn-primary btn-lg" href="/survey" role="button">Get Your Quiz On</a><br><br>
+		<img style="max-height: 20%; max-width: 20%;" src="css/couch.png">
+	  </div>
+	</div>
+
 
 </body>
 </html>
