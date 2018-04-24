@@ -58,6 +58,27 @@
 		}
 	</style>
 <body>
+			<!-- Modal positioned at top to avoid problems showing up in live-mode-->
+	<div id="results-here" class="modal fade" id="results" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="exampleModalLabel">You're Most Compatible With...</h4>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body" style="text-align: center;">
+	        <h3 id="compatible-name"></h3>
+	        <img id="compatible-gif" src="" width="400px";>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<div class="jumbotron jumbotron-fluid top-j">
 	  <div class="container">
 	    <h1 class="display-4">F<span style="color: #e02c1c">!</span>r<span style="color: #3bbbe6">^</span>i<span style="color: #ffc105">!</span>e<span style="color: #e02c1c">&</span>n<span style="color: #3bbbe6">^</span>d F<span style="color: #e02c1c">!</span>i<span style="color: #3bbbe6">^</span>n<span style="color: #ffc105">!</span>d<span style="color: #e02c1c">&</span>e<span style="color: #3bbbe6">^</span>r</h1>
