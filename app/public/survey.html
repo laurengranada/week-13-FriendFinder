@@ -32,7 +32,6 @@
 		.friends-font{
 		   font-family: 'Friends';
 		   text-shadow: 1px 2px black;
-		   color: black;
 		}
 		.jumbotron{
 			text-align: center;
@@ -176,7 +175,65 @@
 				<!-- // submit button -->
 	  			<button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" id="submit" style="width: 75%"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button>
 	  </div>
-	</div>
+		</div>
+
+		    <footer class="footer" style="text-align: center;">
+		      <div class="container">
+		        <h4><a style="color: white" href="/">Homepage</a></h4>
+		      </div>
+		    </footer>
+
+<!-- javascript -->
+	<script type="text/javascript">
+
+		$("#submit").on("click", function(){
+	      // Form validation
+	      function validateForm() {
+	        var isValid = true;
+
+	        $(".custom-select").each(function() {
+
+	          if ($(this).val() === "") {
+	            isValid = false;
+	          }
+	        });
+	        return isValid;
+	      }
+		// If all required fields are filled
+	      if (validateForm()) {
+			// store user data for comparison
+			var userData = {
+	          name: $("#name").val(),
+	          photo: $("#photo").val(),
+	          scores: [
+	            $("#question1").val(),
+	            $("#question2").val(),
+	            $("#question3").val(),
+	            $("#question4").val(),
+	            $("#question5").val(),
+	            $("#question6").val(),
+	            $("#question7").val(),
+	            $("#question8").val(),
+	            $("#question9").val(),
+	            $("#question10").val()
+	          ]
+	        };
+	        //ajax post
+	        $.post("/api/friends", userData, function(data){
+	        	//post results
+	        	$("#compatible-name").text(data.name);
+	        	$("#compatible-gif").attr("src", data.photo);
+
+	        	//trigger modal
+	        	$("#results-here").modal("toggle");
+	        });
+	    }else {
+        alert("Please answer all questions before submitting!");
+      }
+	});
+
+	</script>
+
 
 
 </body>
