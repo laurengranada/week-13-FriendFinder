@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Friends Finder</title>
+	<!-- for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<!-- bootstrap js -->
@@ -50,6 +52,21 @@
 			text-align: center;
 			box-shadow: 3px 5px 15px black;
 		}
+		/*for mobile*/
+		@media only screen and (max-width: 740px) {
+		    .display-4{
+		    	font-size: 280%;
+		    	margin-top: 45px;
+		    }
+			.center-container{
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-top: 40px;
+			}
+			img{
+				max-width: 120%;
+			}
+		}
 	</style>
 <body>
 	<div class="jumbotron jumbotron-fluid top-j">
@@ -62,7 +79,7 @@
 	  <div class="container">
 		<p class="lead">Take this quiz & find out which <br> <span class="friends-font"> F<span style="color: #e02c1c">!</span>r<span style="color: #3bbbe6">^</span>i<span style="color: #ffc105">!</span>e<span style="color: #e02c1c">&</span>n<span style="color: #3bbbe6">^</span>d<span style="color: #ffc105">&</span>s </span> <br> character you're most compatible with!</p>
 		<a class="btn btn-primary btn-lg" href="/survey" role="button">Get Your Quiz On</a><br><br>
-		<img style="max-height: 20%; max-width: 20%;" src="css/couch.png">
+		<img style="width: 150px; /*max-width: 20%*/;" src="css/couch.png">
 	  </div>
 	</div>
 
